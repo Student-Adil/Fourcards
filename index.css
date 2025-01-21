@@ -14,9 +14,13 @@ body{
 }
 h5{
   color: rgba(0, 0, 0, 0.234);
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
   line-height: 1.5;
+  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+
 }
 .box{
   display: flex;
@@ -44,8 +48,8 @@ h5{
 
 }
 .cards{
-  padding: 20px;
-
+  padding: 30px;
+display: flex;
   border-radius: 6px;
   flex-direction: column;
   transition: bacakground-color 0.8 ease;
@@ -59,9 +63,17 @@ h5{
   text-align: center;
   font-family:'poppins',sans-serif;
 }
-.title h1,title.p{
-  font-size: larger;
+.title h1{
+  font-size: 28px;
   text-align: center;
+  font-weight: 700;
+}
+.title p{
+  padding-bottom: 8px;
+  font-size: 26px;
+  text-align: center;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.716);
 }
 .c1{
   display: flex;
@@ -91,7 +103,35 @@ h5{
   height: 50px;
   width: 50px;
   margin-top: 40px;
-  align-self: flex-end;
+  align-self:flex-end;
 
 
+}
+@media(width <= 900px){
+  .cards-container{
+    grid-template-columns: repeat(2/1fr);
+    grid-template-rows : repeat(2/1fr);
+
+  }
+  .c1{
+    grid-row: 1/2;
+  }
+  .c3{
+    grid-area: auto;
+  }
+  .c4{
+    grid-column: auto;
+  }
+}
+@media(width <=600px){
+  .cards-container{
+    grid-template-columns: repeat(1,90%);
+  }
+  .cards img{
+    height: 40px;
+    width: 40px;
+  }
+  .cards h5{
+    font-size: 10px;
+  }
 }
